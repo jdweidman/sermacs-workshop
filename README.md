@@ -8,6 +8,7 @@ sermacs_workshop
 Sample repository for MolSSI Workshop at SERMACS
 
 This is the readme.
+James was here to steal ur code m8.
 
 ### Copyright
 
