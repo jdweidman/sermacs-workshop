@@ -1,23 +1,26 @@
 """
-string_util.py
-Oh god how do I push things.
-
-Misc. string processing functions
+string_utill.py
+Sample file to practice pull request
 """
 
 def title_case(sentence):
     """
-    Capitalize the first letter of every word.
-
+    onverts string to title case
     Parameters
-    ----------------
+    _____________
     sentence: string
-        The sentence to be put into title case.
-
+        Sentence to be transformed
+    
     Returns
-    ----------------
-    capitalized: string
-        The input string in title case.
+    ____________
+    titled:  string
+         Sentence in title format
+    
+    Example
+    ___________
+    >>> title_case('This iS a string')
+        This Is A String
+    >>>
     """
 
     #Check that input is string
@@ -27,14 +30,17 @@ def title_case(sentence):
     #Check that input is not empty
     if len(sentence) == 0:
         raise IndexError('Cannot apply title function to empty string.')
+    ignore = ['the', 'of', 'a']
+    titled = [x[0].upper()+x[1:].lower() for  x in sentence.split()]
+    caps = []
+    caps.append(titled[0])
+    for tit in titled[1:]:
+       print(tit)
+       if tit.lower() in ignore:
+           caps.append(tit.lower())
+       else:
+           caps.append(tit)
+    titled = ' '.join(caps)
+    return titled
 
-    if sentence == sentence.upper():
-        capitalized = ' '.join([x[0].upper()+x[1:].lower() for x in sentence.strip().split()])
-    else:
-        capitalized = ' '.join([x[0].upper()+x[1:] for x in sentence.strip().split()])
-    return capitalized
 
-if __name__ == "__main__":
-    this = 'I AM SUPER ANNOYED WITH THESE CCQC TURDS.'
-#   this = 'I am super annoyed with these CCQC turds.'
-    print(title_case(this))
