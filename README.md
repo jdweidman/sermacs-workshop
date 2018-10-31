@@ -15,6 +15,7 @@ Copyright (c) 2018, Jared Weidman
 
 
 #### Acknowledgements
+Sarah is the best
  
 Project based on the 
 [Computational Molecular Science Python Cookiecutter](https://github.com/molssi/cookiecutter-cms)
