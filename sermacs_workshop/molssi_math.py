@@ -5,6 +5,7 @@ Sample repository for MolSSI Workshop at SERMACS
 Misc. math functions
 """
 
+
 def mean(num_list):
     """
     Computes the mean of a list
@@ -19,10 +20,10 @@ def mean(num_list):
     mean: float
         Mean of list of numbers
     """
-    
+
     #Check that input is type list
     if not isinstance(num_list, list):
-        raise TypeError('Input must be type list') 
+        raise TypeError('Input must be type list')
 
     #Check that list has length
     if len(num_list) == 0:
@@ -41,11 +42,10 @@ def mean(num_list):
 
     #mean = sum/len(num_list)
     #return mean
-    
+
     try:
-        mean = sum(num_list)/len(num_list)
+        mean = sum(num_list) / len(num_list)
     except TypeError:
         raise TypeError('Input list must consist only of ints or floats')
-        
 
     return mean
