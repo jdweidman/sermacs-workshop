@@ -20,6 +20,14 @@ def title_case(sentence):
         The input string in title case.
     """
 
+    #Check that input is string
+    if not isinstance(sentence, str):
+        raise TypeError('Input must be type str')
+    
+    #Check that input is not empty
+    if len(sentence) == 0:
+        raise IndexError('Cannot apply title function to empty string.')
+
     if sentence == sentence.upper():
         capitalized = ' '.join([x[0].upper()+x[1:].lower() for x in sentence.strip().split()])
     else:
